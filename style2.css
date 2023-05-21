@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(210, 210, 210);
+}
+
+.navbar.navbar-expand-sm {
+    background-color: #00ACEE !important;
+    z-index: 10;
+    min-height: 11vh;
+    border-bottom: 1px solid black;
+    box-shadow: 0 3.5px 10px black;
+}
+
+.navbar.navbar-expand-sm a {
+    color: white;
+    font-size: 18px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-nav {
+    gap: 5px;
+}
+
+.nav-link {
+    width: max-content;
+    position: relative;
+}
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    width: 0;
+    height: 3px;
+    transition: .3s;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+nav .nav-link:hover::after,
+section .nav-link:hover::after {
+    width: 100%;
+}
+
+.gallery-title {
+    width: max-content;
+    margin: 0 auto 5%;
+    position: relative;
+}
+
+section {
+    padding: 10% 0 7%;
+    margin: auto;
+    width: 90%;
+    border-bottom: 2px rgb(120, 120, 120, .5) solid;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.item {
+    width: 95%;
+    margin: auto;
+    aspect-ratio: 1;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px black solid;
+    box-shadow: 8px 8px 10px rgba(25, 25, 25, .8);
+    transition: .3s
+}
+
+.item:hover {
+    scale: 1.03;
+}
+
+.wrap {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+.item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.image {
+    display: none;
+}
+
+.zoom {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.content h3 {
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    width: max-content;
+    margin: 5px auto;
+    background-color: rgba(22, 22, 22, .5);
+}
+
+.zoom img {
+    width: 95%;
+    border-radius: 12px;
+    margin: auto;
+    display: block;
+    transition: .3s;
+}
+
+.container {
+    border: transparent solid;
+    min-width: 100%;
+    background-color: #212529;
+}
+
+.container a:hover {
+    filter: brightness(150%);
+}
+
+@media screen and (min-width: 600px) {
+
+    section {
+        padding: 5% 0;
+    }
+
+    .wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .zoom img {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+
+    .wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .zoom img {
+        width: 60%;
+    }
+
+}

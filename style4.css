@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background-color: rgb(250, 250, 250);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.account {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 auto 15px;
+    width: 80%;
+    box-shadow: 8px 8px 10px rgba(25, 25, 25, .8);
+    background-color: #f2f7f5;
+    border: 1px black solid;
+    padding: 5%;
+    border-radius: 12px;
+    transition: 1s;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form * {
+    border-radius: 10px;
+}
+
+form input:not(input[type="checkbox"]) {
+    height: 35px;
+    margin: 15px 0;
+    border: none;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom: 2px black solid;
+    border-radius: 0px;
+    outline: none;
+}
+
+button {
+    position: relative;
+    height: 50px;
+    border: transparent;
+    box-shadow: 3px 4px black;
+    background-color: #ED4A18;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+button:active {
+    top: 2px;
+    left: 2px;
+    box-shadow: 1px 2px black;
+}
+
+.form-title {
+    margin: 0 auto 5%;
+    width: max-content;
+}
+
+.accept {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.accept * {
+    margin: 0;
+}
+
+.pencet {
+    cursor: pointer;
+    margin: 10px auto;
+    color: black;
+    text-decoration: none;
+}
+
+.sign-up {
+    display: flex !important;
+}
+
+.none {
+    display: none;
+}
+
+.message {
+    display: none;
+    color: white;
+    background-color: #ED4A18;
+    width: max-content;
+    padding: 5px;
+    margin: -8px 0 15px;
+    border-radius: 4px;
+}
+
+@media screen and (min-width: 600px) {
+    .account {
+        width: 50%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .account {
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .account {
+        width: 28%;
+        padding: 2%;
+    }
+}
